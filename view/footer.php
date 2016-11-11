@@ -50,7 +50,7 @@
                 <div class="tweet_go"></div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3">
+<!--        <div class="col-sm-6 col-md-3 col-lg-3">
             <div class="widget_title">
                 <h4><span>Flickr Gallery</span></h4>
             </div>
@@ -59,7 +59,7 @@
                     <ul id="flickrFeed" class="flickr-feed"></ul>
                 </div>
             </div>
-        </div>
+        </div>-->
     </footer>
     <!--end footer-->
 
