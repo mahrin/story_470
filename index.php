@@ -16,7 +16,7 @@
 
     <!-- <link rel="stylesheet" href="view/css/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="view/css/font-awesome.css"/>
+     <link href="view/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="view/css/fractionslider.css"/>
     <link rel="stylesheet" href="view/css/style-fraction.css"/>
 

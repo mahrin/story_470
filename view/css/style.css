@@ -411,8 +411,8 @@ a:focus{
 
 /* mahrin modify  */
 .header ul li{
-    float: right;
-    list-style: none;
+/*    float: right;*/
+/*    list-style: none;*/
     padding: 17px 20px;
     border-bottom: 6px solid transparent;
     font-size: 15px;
@@ -420,8 +420,8 @@ a:focus{
 }
 
 .header ul li{
-    float: right;
-    list-style: none;
+/*    float: right;
+    list-style: none;*/
     padding: 17px 20px;
     border-bottom: 6px solid transparent;
     font-size: 15px;
@@ -439,10 +439,10 @@ a:focus{
     color:#07cb79;
 }
 
-.header .dropdown-menu li{
+/*.header .dropdown-menu li{
     padding-left: 0px !important;
      padding-right: 0px !important;
-}
+}*/
 
 
 
