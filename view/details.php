@@ -159,7 +159,7 @@
                             <div class="post_content">
                                 <div class="post_meta">
                                     <h2>
-                                        <a href="#">perferendis doloribus asperiores ut labore</a>
+                                        <a href="#">POST TITLE</a>
                                     </h2>
                                     <div class="metaInfo">
                                         <span><i class="fa fa-calendar"></i> <a href="#">Nov 28, 2015</a> </span>
