@@ -1,10 +1,24 @@
+
+
+<?php
+require("control/connection.php");
+
+if (isset($_GET['recepie_id'])) {
+    $recepie_id = $_GET['recepie_id'];
+}
+
+$query = mysql_query("SELECT * from recepie");
+$recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients = $recepie_id =$rate ="";
+?>
+
+
 <!DOCTYPE html>
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Travel stories</title>
+    <title>Food Blog</title>
     <meta name="description" content="">
 
     <!-- CSS FILES -->
@@ -16,12 +30,12 @@
 
     <!-- <link rel="stylesheet" href="view/css/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-     <link href="view/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="view/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="view/css/fractionslider.css"/>
     <link rel="stylesheet" href="view/css/style-fraction.css"/>
 
     <link rel="stylesheet" href="view/css/style_footer.css"/>
-
+    <link rel = "stylesheet" href = "view/css/data_show_box_style.css" type = "text/css">
 </head>
 <body>
 
@@ -37,19 +51,19 @@
 
             <div class="slide">
                 <img src="view/images/slider/slider1.jpg" class='slide_img' data-in="left" data-out="fade" data-delay=""/>
-                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">St. Martin's Island </p>
+                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">Strawberry Tart</p>
             </div>
             <div class="slide">
                 <img src="view/images/slider/slider3.jpg" class='slide_img' data-in="left" data-out="fade" data-delay=""/>
-                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">ahsan manzil </p>
+                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">Chocolate cake </p>
             </div>
             <div class="slide">
                 <img src="view/images/slider/slider2.jpg" class='slide_img' data-in="left" data-out="fade" data-delay=""/>
-                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300"> cox's bazar</p>
+                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300"> peanut biscuits</p>
             </div>
             <div class="slide">
                 <img src="view/images/slider/slider4.jpg" class='slide_img' data-in="left" data-out="fade" data-delay=""/>
-                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">St. Martin's Island </p>
+                <p class="slide-1 " data-position="200,500" data-in="left" data-out="right" data-delay="2300">Coffe </p>
             </div>
 
         </div>
@@ -63,77 +77,79 @@
 
 
         <section class="info_abt_me">
-            <div class="title dividerHeading text-center"><h4>Why I love Bangladesh</h4></div>    
-            <div class='details'>“It's the cycle rickshaws that do it for me in Bangladesh. They're works of art, from their brightly decorated handlebars and the struts of their canopies to their painted backs, displaying anything from mosques to Bangla film stars. To a soundtrack of bicycle bells, they weave their way through roads as if the words 'traffic jam' were unknown. It doesn't matter if you're in the smallest village trying to find some..</div>
+            <div class="title dividerHeading text-center"><h4>Why I love Food</h4></div>    
+            <div class='details'>“Hello,I am Mahrin .I am a big foodie and that is why I like having food at different places and countries.
+                And that is why I made up my mind to make a BLOG so that I can share my experience with food all around the world.
+                Because I feel sharing is caring..</div>
         </section>
 
 
 
 
-        <!--start info service-->
-        <section class="info_service wrapper">
-            <div class="title dividerHeading text-center"><h4>Survival guide</h4></div>  
-
-            <div class="row sub_content wow fadeIn">
-                <div class="col-md-3 col-sm-6">
-                    <div class="serviceBox_2 green">
-                        <div class="service-icon">
-                            <i class="fa fa-plane"></i>
+        <!--        start info service
+                <section class="info_service wrapper">
+                    <div class="title dividerHeading text-center"><h4>Survival guide</h4></div>  
+        
+                    <div class="row sub_content wow fadeIn">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="serviceBox_2 green">
+                                <div class="service-icon">
+                                    <i class="fa fa-plane"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Visa</h3>
+                                    <p> dull but essential passport & paperwork</p>
+                                    <div class="read">
+                                        <a href="">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="service-content">
-                            <h3>Visa</h3>
-                            <p> dull but essential passport & paperwork</p>
-                            <div class="read">
-                                <a href="">Read more</a>
+        
+                        <div class="col-md-3 col-sm-6">
+                            <div class="serviceBox_2 purple">
+                                <div class="service-icon">
+                                    <i class="fa fa-umbrella"></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Best time to go</h3>
+                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
+                                    <div class="read">
+                                        <a href="">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="serviceBox_2 red">
+                                <div class="service-icon">
+                                    <i class="fa  fa-money "></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Money & cost</h3>
+                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
+                                    <div class="read">
+                                        <a href="">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="serviceBox_2 blue">
+                                <div class="service-icon">
+                                    <i class="fa fa-stethoscope "></i>
+                                </div>
+                                <div class="service-content">
+                                    <h3>Health</h3>
+                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
+                                    <div class="read">
+                                        <a href="">Read more</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="serviceBox_2 purple">
-                        <div class="service-icon">
-                            <i class="fa fa-umbrella"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Best time to go</h3>
-                            <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                            <div class="read">
-                                <a href="">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="serviceBox_2 red">
-                        <div class="service-icon">
-                            <i class="fa  fa-money "></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Money & cost</h3>
-                            <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                            <div class="read">
-                                <a href="">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="serviceBox_2 blue">
-                        <div class="service-icon">
-                            <i class="fa fa-stethoscope "></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Health</h3>
-                            <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                            <div class="read">
-                                <a href="">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>-->
         <!--end info service-->
 
 
@@ -177,72 +193,64 @@
 
         <section class="super_sub_content row">
             <div class="dividerHeading text-center">
-                <h4><span>RECENT POST TIMELINE</span></h4>
+                <h4><span>RECIPES</span></h4>
             </div>
 
-            <div class="col-md-12">
-                <section id="timeline" class="timeline-container">
-                    <div class="timeline-block">
-                        <div class="timeline-img tl-green">
-                            <i class="fa fa-user "></i>
-                        </div>
+            <div class="print_data">
 
-                        <div class="timeline-content">
-                            <h2>Story Title</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus justo a odio cursus faucibus. Vivamus vehicula massa at arcu porta, sed maximus risus molestie. Morbi nec fringilla magna, sit.
-                            </p>
-                            <a href="view/details.php" class="btn btn-default">Read more</a>
-                            <span class="tl-post-date">june 5</span>
-                        </div>
-                    </div>
 
-                    <div class="timeline-block">
-                        <div class="timeline-img tl-blue">
-                            <i class="fa fa-user"></i>
-                        </div>
 
-                        <div class="timeline-content">
-                           <h2>Story Title</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus justo a odio cursus faucibus. Vivamus vehicula massa at arcu porta, sed maximus risus molestie. Morbi nec fringilla magna, sit.
-                            </p>
-                            <a href="view/details.php" class="btn btn-default">Read more</a>
-                            <span class="tl-post-date">june 8</span>
-                        </div>
-                    </div>
+                <?php
+                while ($rows = mysql_fetch_array($query)) {
+                    $recepie_id = $rows['recepie_id'];
+                    $recepie_name = $rows['recepie_name'];
+                    $cuisine = $rows['cuisine'];
+                    $catagory = $rows['catagory'];
+                    $no_of_ingredients = $rows['no_of_ingredients'];
+                    $price = $rows['price'];
+                    $path = 'view/images/food/' . $recepie_id . '.jpg';
+                    $img_path = $path;
+                    ?>
 
-                    <div class="timeline-block">
-                        <div class="timeline-img tl-pink">
-                            <i class="fa fa-user"></i>
-                        </div>
+                    <form action="description.php" method="POST">
 
-                        <div class="timeline-content">
-                            <h2>Story Title</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus justo a odio cursus faucibus. Vivamus vehicula massa at arcu porta, sed maximus risus molestie. Morbi nec fringilla magna, sit.
-                            </p>
-                            <a href="view/details.php"class="btn btn-default">Read more</a>
-                            <span class="tl-post-date">june 12</span>
-                        </div>
-                    </div>
+                        <div class="details_1">
 
-                    <div class="timeline-block">
-                        <div class="timeline-img tl-orange">
-                            <i class="fa fa-user"></i>
-                        </div>
 
-                        <div class="timeline-content">
-                           <h2>Story Title</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus justo a odio cursus faucibus. Vivamus vehicula massa at arcu porta, sed maximus risus molestie. Morbi nec fringilla magna, sit.
-                            </p>
-                            <a href="view/details.php" class="btn btn-default">Read more</a>
-                            <span class="tl-post-date">june 18</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                            <div id="product_div" style="display: inline;">
+
+
+                                <div id='name'><?php echo $recepie_name; ?></div>
+
+
+                                <div id="image_div">
+                                    <img src="<?php echo"$img_path"; ?>"  style="width:295px;height: 250px;border:2px solid black;margin:1px;"> 
+                                </div>
+
+                                <div id="info_product">
+
+                                    <div id='desc'>
+                                        <b>Cuisine :</b> <?php echo $cuisine; ?> <br>
+                                        <b>Category :</b> <?php echo $catagory; ?><br>
+                                        <b>Number of Ingredients :</b> <?php echo $no_of_ingredients; ?><br>
+                                        <b>Making Cost</b>:<big> <?php echo $price; ?> BDT</big>
+                                    </div>
+
+                                    <input type="hidden" name="id" value="<?php echo "$recepie_id"; ?>"><br><br>
+                                    <a class='details_button_link'href="view/description.php?id=<?php echo "$recepie_id"; ?>">View Details</a>
+                                    </form> 
+
+                                </div>
+
+                            </div>
+
+                            <?php
+                        }
+                        ?>	
+
+                    </div>   
+            </div> 
+
         </section>
 
 
@@ -254,7 +262,7 @@
 
 
 
-     <?php include 'view/footer.php'; ?>
+    <?php include 'view/footer.php'; ?>
 
 
     <!--   -------- footer ended------------>

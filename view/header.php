@@ -4,8 +4,8 @@
 
     <div class="col-sm-5 pull-left">
         <div id="logo">
-            <h1><a href="index.php">
-                    <div class="logo">Travel <span>S</span>tories</div>
+            <h1><a href="../index.php">
+                    <div class="logo">Food <span>B</span>log</div>
                 </a></h1>
         </div>
     </div> 
@@ -19,23 +19,46 @@
 
                 <li class="active"><a href="index.php">Home</a>
                 </li>
-                <li><a href="#">destinations</a>
+
+                <li>
+                    <a href="#">Category</a>
                     <ul class="dropdown-menu">
-                        <li><a href="elements.html">Dhaka</a></li>
-                        <li><a href="form-elements.html">Chittagong</a></li>
-                        <li><a href="columns.html">Cox-bazar</a></li>
-                        <li><a href="typography.html">St Martin's</a></li>
-                        <li><a href="pricing-tables.html">Sonargoan</a></li>
+                        <li>
+                            <form action="view/catagory_search.php" method="POST"> 
+                                <input type="hidden" name="rc" value="main_course"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Main Course</button>
+                            </form>
+                        </li>
+                        <li>  <form action="view/catagory_search.php" method="POST"> 
+                                <input type="hidden" name="rc" value="appetizer"><br><br>
+                                <button  class="menu_button" type="submit"  name="submit">Appetizer</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="view/catagory_search.php" method="POST"> 
+                                <input type="hidden" name="rc" value="drink"><br><br>
+                                <button class="menu_button"  type="submit"  name="submit">Drink</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="view/catagory_search.php" method="POST"> 
+                                <input type="hidden" name="rc" value="dessert"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Dessert</button>
+                            </form>
+                        </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="view/stories.php">stories</a>
-                </li>
+
+
                 <li> 
                     <a href="view/faq.php">Faq</a>   
                 </li>
 
-                <li><a href="view/signin.php">Sign in</a>
+                <li>
+                    <a href="view/signin.php">Sign in</a>
+                </li>
+                <li>
+                    <a href="admin_page.php"><span class="glyphicon glyphicon-asterisk"></span>Admin Page</a>
                 </li>
             </ul>
         </div>

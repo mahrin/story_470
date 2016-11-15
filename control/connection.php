@@ -1,11 +1,10 @@
 <?php
 
-$host_name = "localhost";
-$db_user = 'root';
-$password = '';
-$db_name='leave_manage';
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'project391';
+$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
+mysql_select_db($dbname);
 
-// Create connection
-$conn = mysqli_connect($host_name,$db_user, $password,$db_name) or die(mysqli_error());
-
-?> 
+?>

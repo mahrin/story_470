@@ -9,7 +9,7 @@
         <meta name="author" content="">
 
 
-        <title>Travel Stories</title>
+        <title>Food Blog</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">

@@ -77,6 +77,12 @@ header .logo span{
     color:#07cb79;
 }
 
+.menu_button{
+    background-color: white;
+    text-align: center;
+   border:none;
+}
+
 *{
     word-wrap: break-word;
 }
