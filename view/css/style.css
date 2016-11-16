@@ -428,7 +428,16 @@ a:focus{
 .header ul li{
 /*    float: right;
     list-style: none;*/
-    padding: 17px 20px;
+    padding: 14px 20px;
+    border-bottom: 6px solid transparent;
+    font-size: 15px;
+
+}
+.header ul li ul li{
+/*    float: right;
+    list-style: none;*/
+    padding: 0px 20px;
+    padding-bottom: 15px;
     border-bottom: 6px solid transparent;
     font-size: 15px;
 

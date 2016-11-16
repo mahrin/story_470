@@ -48,10 +48,56 @@
                         </li>
                     </ul>
                 </li>
+                
+                 <li>
+                    <a href="#">Cuisine</a>
+                    <ul class="dropdown-menu">
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="american"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">American</button>
+                            </form>
+                        </li>
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="indian"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Indian</button>
+                            </form>
+                        </li>
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="chinese"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Chinese</button>
+                            </form>
+                        </li>
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="japanese"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Japanese</button>
+                            </form>
+                        </li>
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="italian"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Italian</button>
+                            </form>
+                        </li>
+                        <li> 
+                            <form action="view/cuisine_search.php" method="POST"> 
+                                <input type="hidden" name="recepie_cuisine" value="mexican"><br><br>
+                                <button class="menu_button" type="submit"  name="submit">Mexican</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
 
 
                 <li> 
                     <a href="view/faq.php">Faq</a>   
+                </li>
+                <li> 
+                    <a href="view/report.php">Report</a>   
                 </li>
 
                 <li>

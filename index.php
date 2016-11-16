@@ -8,7 +8,7 @@ if (isset($_GET['recepie_id'])) {
 }
 
 $query = mysql_query("SELECT * from recepie");
-$recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients = $recepie_id =$rate ="";
+$recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients = $recepie_id = $rate = "";
 ?>
 
 
@@ -33,6 +33,12 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
     <link href="view/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="view/css/fractionslider.css"/>
     <link rel="stylesheet" href="view/css/style-fraction.css"/>
+
+<!--    <script type="text/javascript" src="view/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet"  href="view/css/drop_down_menu.css" type="text/css" media="all">
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+    <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">-->
+
 
     <link rel="stylesheet" href="view/css/style_footer.css"/>
     <link rel = "stylesheet" href = "view/css/data_show_box_style.css" type = "text/css">
@@ -83,74 +89,6 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
                 Because I feel sharing is caring..</div>
         </section>
 
-
-
-
-        <!--        start info service
-                <section class="info_service wrapper">
-                    <div class="title dividerHeading text-center"><h4>Survival guide</h4></div>  
-        
-                    <div class="row sub_content wow fadeIn">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="serviceBox_2 green">
-                                <div class="service-icon">
-                                    <i class="fa fa-plane"></i>
-                                </div>
-                                <div class="service-content">
-                                    <h3>Visa</h3>
-                                    <p> dull but essential passport & paperwork</p>
-                                    <div class="read">
-                                        <a href="">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="serviceBox_2 purple">
-                                <div class="service-icon">
-                                    <i class="fa fa-umbrella"></i>
-                                </div>
-                                <div class="service-content">
-                                    <h3>Best time to go</h3>
-                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                                    <div class="read">
-                                        <a href="">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="serviceBox_2 red">
-                                <div class="service-icon">
-                                    <i class="fa  fa-money "></i>
-                                </div>
-                                <div class="service-content">
-                                    <h3>Money & cost</h3>
-                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                                    <div class="read">
-                                        <a href="">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="serviceBox_2 blue">
-                                <div class="service-icon">
-                                    <i class="fa fa-stethoscope "></i>
-                                </div>
-                                <div class="service-content">
-                                    <h3>Health</h3>
-                                    <p> sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.</p>
-                                    <div class="read">
-                                        <a href="">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>-->
-        <!--end info service-->
 
 
 
@@ -289,6 +227,34 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
     <script src="view/js/retina-1.1.0.min.js"></script>
     <script type="text/javascript" src="view/js/jquery.cookie.js"></script>
 
+<!--    <script type="text/javascript" src="view/js/drop_down_menu.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('a[href="#"]').on('click', function (e) {
+                e.preventDefault();
+            });
+
+            $('#menu > li').on('mouseover', function (e) {
+                $(this).find("ul:first").show();
+                $(this).find('> a').addClass('active');
+            }).on('mouseout', function (e) {
+                $(this).find("ul:first").hide();
+                $(this).find('> a').removeClass('active');
+            });
+
+            $('#menu li li').on('mouseover', function (e) {
+                if ($(this).has('ul').length) {
+                    $(this).parent().addClass('expanded');
+                }
+                $('ul:first', this).parent().find('> a').addClass('active');
+                $('ul:first', this).show();
+            }).on('mouseout', function (e) {
+                $(this).parent().removeClass('expanded');
+                $('ul:first', this).parent().find('> a').removeClass('active');
+                $('ul:first', this).hide();
+            });
+        });
+    </script>-->
 
 
 </body>
