@@ -139,7 +139,7 @@ $query = mysql_query("SELECT * from recepie where recepie_id=" . $_GET["id"]);
 
                                         <?php
                                         mysql_connect("localhost", "root", "");
-                                        mysql_select_db("project391");
+                                        mysql_select_db("food_blog");
                                         $db = mysql_connect("localhost", "root", "");
                                         mysql_query("SET character_set_results=utf8", $db);
                                         $ratingquery = mysql_query("SELECT rate FROM ratingtable where recepie_id=$recepie_id");
@@ -226,7 +226,7 @@ $query = mysql_query("SELECT * from recepie where recepie_id=" . $_GET["id"]);
 
                                             <?php
                                             mysql_connect("localhost", "root", "");
-                                            mysql_select_db("project391");
+                                            mysql_select_db("food_blog");
 
 
                                             $dbLink = mysql_connect("localhost", "root", "");

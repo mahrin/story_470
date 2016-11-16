@@ -42,7 +42,7 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
 
     <!--Start Header-->
 
-    <?php include 'view/header.php'; ?>
+    <?php include 'view/header_index.php'; ?>
 
     <!--End Header-->
 
