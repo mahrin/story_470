@@ -24,7 +24,7 @@
                     <a href="#">Category</a>
                     <ul class="dropdown-menu" style="z-index: 100;">
                         <li>
-                            <form action="catagory_search.php" method="POST"> 
+                            <form action="catagory_search.php" method="POST" > 
                                 <input type="hidden" name="rc" value="main_course"><br><br>
                                 <button class="menu_button" type="submit"  name="submit">Main Course</button>
                             </form>

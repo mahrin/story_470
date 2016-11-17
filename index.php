@@ -28,7 +28,7 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
 
 
 
-    <!-- <link rel="stylesheet" href="view/css/font-awesome/css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="view/css/menu_mul.css"> 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="view/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="view/css/fractionslider.css"/>
@@ -48,7 +48,7 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
 
     <!--Start Header-->
 
-    <?php include 'view/header_index.php'; ?>
+    <?php include 'view/menu_mul.php'; ?>
 
     <!--End Header-->
 
@@ -227,34 +227,60 @@ $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients =
     <script src="view/js/retina-1.1.0.min.js"></script>
     <script type="text/javascript" src="view/js/jquery.cookie.js"></script>
 
-<!--    <script type="text/javascript" src="view/js/drop_down_menu.js"></script>
+<!-- <script type="text/javascript" src="view/js/drop_down_menu.js"></script>-->
+    
+    
     <script type="text/javascript">
-        $(function () {
-            $('a[href="#"]').on('click', function (e) {
-                e.preventDefault();
-            });
+       var ww = document.body.clientWidth;
 
-            $('#menu > li').on('mouseover', function (e) {
-                $(this).find("ul:first").show();
-                $(this).find('> a').addClass('active');
-            }).on('mouseout', function (e) {
-                $(this).find("ul:first").hide();
-                $(this).find('> a').removeClass('active');
-            });
+$(document).ready(function() {
+    $(".nav li a").each(function() {
+		if ($(this).next().length > 0) {
+			$(this).addClass("parent");
+		};
+	})
+	
+	$(".toggleMenu").click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass("active");
+		$(".nav").toggle();
+	});
+	adjustMenu();
+})
 
-            $('#menu li li').on('mouseover', function (e) {
-                if ($(this).has('ul').length) {
-                    $(this).parent().addClass('expanded');
-                }
-                $('ul:first', this).parent().find('> a').addClass('active');
-                $('ul:first', this).show();
-            }).on('mouseout', function (e) {
-                $(this).parent().removeClass('expanded');
-                $('ul:first', this).parent().find('> a').removeClass('active');
-                $('ul:first', this).hide();
-            });
-        });
-    </script>-->
+$(window).bind('resize orientationchange', function() {
+	ww = document.body.clientWidth;
+	adjustMenu();
+});
+
+var adjustMenu = function() {
+	if (ww < 768) {
+		$(".toggleMenu").css("display", "inline-block");
+		if (!$(".toggleMenu").hasClass("active")) {
+			$(".nav").hide();
+		} else {
+			$(".nav").show();
+		}
+		$(".nav li").unbind('mouseenter mouseleave');
+		$(".nav li a.parent").unbind('click').bind('click', function(e) {
+			// must be attached to anchor element to prevent bubbling
+			e.preventDefault();
+			$(this).parent("li").toggleClass("hover");
+		});
+	} 
+	else if (ww >= 768) {
+		$(".toggleMenu").css("display", "none");
+		$(".nav").show();
+		$(".nav li").removeClass("hover");
+		$(".nav li a").unbind('click');
+		$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+		 	// must be attached to li so that mouseleave is not triggered when hover over submenu
+		 	$(this).toggleClass('hover');
+		});
+	}
+}
+
+    </script>
 
 
 </body>

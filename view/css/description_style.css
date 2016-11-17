@@ -126,3 +126,7 @@ color:white;
     font-family:Monotype Corsiva;
     font-weight: bolder; 
 }
+
+.rating_div{
+    border:1px solid #9199C7;
+}
