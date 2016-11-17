@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
 //    echo $recepie_cuisine;
 
     $recepie_name = $cuisine = $price = $catagory = $no_of_ingredients = $description = $ingredients = $recepie_id = "";
-    $query = mysql_query("SELECT * from recepie where catagory='main_course' AND  cuisine='" . $_POST["recepie_cuisine"] . "'");
+    $query = mysql_query("SELECT * from recepie where  main_copy=1 AND  catagory='main_course' AND  cuisine='" . $_POST["recepie_cuisine"] . "'");
 }
 ?>
 
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         <div class="container">
             <section class="super_sub_content row">
                 <div class="dividerHeading text-center">
-                    <h4 style="text-transform: uppercase;"><span><?php echo $recepie_cuisine; ?></span></h4>
+                    <h4 style="text-transform: uppercase;"><span><?php echo 'Main Courses '.$recepie_cuisine; ?></span></h4>
                 </div>
 
                 <div class="print_data" style='margin:0px;padding: 0px;'>

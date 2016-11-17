@@ -4,7 +4,7 @@ require("../control/connection.php");
 if (isset($_POST['submit'])) {
     $recepie_catagory = $_POST['rc'];
     $recepie_name = $cuisine = $price = $catagory = $no_of_ingredients = $description = $ingredients = $recepie_id = "";
-    $query = mysql_query("SELECT * from recepie where catagory='" . $_POST["rc"] . "'");
+    $query = mysql_query("SELECT * from recepie where main_copy=1  AND  catagory='" . $_POST["rc"] . "'");
 }
 ?>
 

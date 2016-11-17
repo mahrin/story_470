@@ -2,7 +2,7 @@
 
     <div class="col-sm-5 pull-left">
         <div id="logo">
-            <h1><a href="../index.php">
+            <h1><a href="index.php">
                     <div class="logo">Food <span>B</span>log</div>
                 </a></h1>
         </div>
@@ -46,58 +46,52 @@
                                     <button class="menu_button" type="submit"  name="submit">Italian</button>
                                 </form>
                             </li>
-<!--                            <li>
-                                <form action="view/catagory_search_main_course.php" method="POST" target="_blank"> 
-                                    <input type="hidden" name="recepie_cuisine" value="chinese">
-                                    <button class="menu_button" type="submit"  name="submit">Chinese</button>
-                                </form>
-                            </li>-->
+                            <!--                            <li>
+                                                            <form action="view/catagory_search_main_course.php" method="POST" target="_blank"> 
+                                                                <input type="hidden" name="recepie_cuisine" value="chinese">
+                                                                <button class="menu_button" type="submit"  name="submit">Chinese</button>
+                                                            </form>
+                                                        </li>-->
                         </ul>
                     </li>
-                    
-                    
+
+
                     <li>
                         <form action="view/catagory_search.php" method="POST" target="_blank"> 
                             <input type="hidden" name="rc" value="appetizer">
                             <button  class="menu_button" type="submit"  name="submit">Appetizer</button>
                         </form>
-                        
+
                         <ul>
-                         
+
                             <li>
                                 <form action="view/catagory_search_appetizer.php" method="POST" target="_blank"> 
                                     <input type="hidden" name="recepie_cuisine" value="chinese">
                                     <button class="menu_button" type="submit"  name="submit">Chinese</button>
                                 </form>
                             </li>
-                             <li>
+                            <li>
                                 <form action="view/catagory_search_appetizer.php" method="POST" target="_blank"> 
                                     <input type="hidden" name="recepie_cuisine" value="japanese">
                                     <button class="menu_button" type="submit"  name="submit">Japanese</button>
                                 </form>
                             </li>
                         </ul>
-                        
+
                     </li>
                     <li>
                         <form action="view/catagory_search.php" method="POST" target="_blank"> 
                             <input type="hidden" name="rc" value="drink">
                             <button class="menu_button"  type="submit"  name="submit">Drink</button>
                         </form>
-                        <ul>
-                            <li><a href="#">Denim</a></li>
-                            <li><a href="#">Knits</a></li>
-                        </ul>
+
                     </li>
                     <li>
                         <form action="view/catagory_search.php" method="POST" target="_blank"> 
                             <input type="hidden" name="rc" value="dessert">
                             <button class="menu_button" type="submit"  name="submit">Dessert</button>
                         </form>
-                        <ul>
-                            <li><a href="#">Denim</a></li>
-                            <li><a href="#">Knits</a></li>
-                        </ul>
+
                     </li>
                 </ul>
             </li>
@@ -155,6 +149,7 @@
             <li>
                 <a href="view/signin.php"  target="_blank">Sign in</a>
             </li>
+
         </ul>
     </div>
 </div>

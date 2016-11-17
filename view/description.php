@@ -33,7 +33,7 @@ if (isset($_POST['rating'])) {
 
 $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients = $description = $ingredients = $recepie_id = "";
 
-$query = mysql_query("SELECT * from recepie where recepie_id=" . $_GET["id"]);
+$query = mysql_query("SELECT * from recepie where main_copy=1 AND  recepie_id=" . $_GET["id"]);
 ?>
 
 

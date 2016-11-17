@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     // echo $recepie_catagory;
 
     $recepie_name = $cuisine = $price = $catagory = $no_of_ingredients = $description = $ingredients = $recepie_id = "";
-    $query = mysql_query("SELECT * from recepie where cuisine='" . $_POST["recepie_cuisine"] . "'");
+    $query = mysql_query("SELECT * from recepie where main_copy=1 AND  cuisine='" . $_POST["recepie_cuisine"] . "'");
 }
 ?>
 

@@ -7,7 +7,7 @@ if (isset($_GET['recepie_id'])) {
     $recepie_id = $_GET['recepie_id'];
 }
 
-$query = mysql_query("SELECT * from recepie");
+$query = mysql_query("SELECT * from recepie WHERE main_copy=1");
 $recepie_name = $cuisine = $price = $img_path = $catagory = $no_of_ingredients = $recepie_id = $rate = "";
 ?>
 
