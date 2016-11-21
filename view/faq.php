@@ -114,7 +114,7 @@ require("../control/connection.php");
                                         <table>
                                             <tr><td><span style="font-family:Monotype Corsiva;color:white;font-weight: bolder;font-size: 25px;">Name:</span> <br><input placeholder="Write name" type="text" name="name"/></td></tr><br>
                                             <tr><td colspan="2"><span style="font-family:Monotype Corsiva;color:white;font-weight: bolder;font-size: 25px;">Write Question:</span> </td></tr>
-                                            <tr><td colspan="5"><textarea name="comment" placeholder="Write question or recipe "rows="5" cols="50"></textarea></td></tr>
+                                            <tr><td colspan="5"><textarea name="comment" placeholder="Write question "rows="5" cols="50"></textarea></td></tr>
                                             <tr><td colspan="2"><input id='details_button_faq' type="submit" name="submit" value="submit"></td></tr>
                                         </table>
                                     </form>  
@@ -143,7 +143,7 @@ require("../control/connection.php");
                                 ?>
 
                                 <div style="border:2px solid lightsteelblue;padding:20px;margin:20px;text-align: center;">
-                                    <h4 style='text-align: center;background-color: white;font-size: 30px;font-family:Monotype Corsiva;color: black;padding:20px;font-weight: bolder; '>Previous Asked Question:</h4>   
+                                    <h4 style='text-align: center;background-color: white;font-size: 30px;font-family:Monotype Corsiva;color: black;padding:20px;font-weight: bolder; '>Previous Asked Questions:</h4>   
 
                                     <?php
                                     while ($rows = mysql_fetch_assoc($faqquery)) {

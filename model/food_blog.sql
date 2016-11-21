@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2016 at 09:38 PM
+-- Generation Time: Nov 21, 2016 at 05:04 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `faq` (
   `admin_reply` varchar(300) CHARACTER SET utf8 NOT NULL,
   `accept` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `faq`
@@ -97,7 +97,10 @@ INSERT INTO `faq` (`id`, `name`, `comment`, `admin_reply`, `accept`) VALUES
 (18, 'MAHRIN', 'HELLO YOU ARE YOU?', 'IM FINE', 1),
 (19, 'MAHRIN', 'HELLO YOU ARE YOU?', '0', 0),
 (22, 'MAHRIN', 'HELLO YOU ARE YOU?', '0', 0),
-(23, 'marshia', 'what are you eating??', 'noodles', 1);
+(23, 'marshia', 'what are you eating??', 'noodles', 1),
+(24, 'mahrin', 'dadadad', 'fsfsfsf', 1),
+(25, 'mahrin', 'dadadad', '0', 0),
+(26, 'mahrin', 'dadadad', '0', 0);
 
 -- --------------------------------------------------------
 
@@ -141,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `ratingtable` (
   `rate` int(11) NOT NULL DEFAULT '0',
   `recepie_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=145 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=144 ;
 
 --
 -- Dumping data for table `ratingtable`
@@ -187,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `recepie` (
   `main_copy` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`recepie_id`),
   UNIQUE KEY `recepie_name` (`recepie_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `recepie`

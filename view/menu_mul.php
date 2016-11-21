@@ -149,6 +149,9 @@
             <li>
                 <a href="view/signin.php"  target="_blank">Sign in</a>
             </li>
+            <li>
+                <a href="#"  target="_blank">Search   <i class="fa fa-search" aria-hidden="true"></i></a>
+            </li>
 
         </ul>
     </div>
