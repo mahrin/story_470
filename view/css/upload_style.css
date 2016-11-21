@@ -1,0 +1,22 @@
+.upload_1{
+    float:left;padding:5%; background-color: whitesmoke;border:6px solid #ccccff;height:365px;
+    
+}
+.upload_2{
+    float:left;padding:4%;opacity:0.97; background-color: whitesmoke;border:6px solid #ccccff;height:365px;
+    
+}
+.upload_3{
+    float:left;padding:4%;opacity:0.97; background-color: whitesmoke;border:6px solid #ccccff;height:365px;
+    
+}
+
+.upload_4{
+    padding:5%;opacity:0.97; background-color: whitesmoke;border:6px solid #ccccff;height:200px;
+   // background-image: url("back1.jpg");
+    
+}
+.upload_5{
+    float:left;padding:4%; background-color: whitesmoke;border:6px solid #ccccff;height:200px;color:black;
+    
+}

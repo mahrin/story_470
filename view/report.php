@@ -8,6 +8,7 @@ if (isset($_GET['recepie_id'])) {
 
 //$query = mysql_query("SELECT * from recepie ORDER BY upload_date DESC");
 //$query = mysql_query("SELECT * FROM recepie INNER JOIN ratingtable ON recepie.recepie_id=ratingtable.recepie_id ORDER BY recepie.upload_date DESC , ratingtable.rate ASC  ");
+//$query = mysql_query("SELECT * FROM recepie INNER JOIN ratingtable ON recepie.recepie_id=ratingtable.recepie_id WHERE main_copy=1 GROUP BY cuisine ORDER BY upload_date DESC LIMIT 3 ");
 
 $query = mysql_query("SELECT * FROM recepie INNER JOIN ratingtable ON recepie.recepie_id=ratingtable.recepie_id WHERE catagory='main_course'  AND   main_copy=1 ORDER BY upload_date DESC LIMIT 3");
 $dessert = mysql_query("SELECT * FROM recepie INNER JOIN ratingtable ON recepie.recepie_id=ratingtable.recepie_id WHERE catagory='dessert' AND    main_copy=1 ORDER BY upload_date DESC  LIMIT 3");
