@@ -46,6 +46,19 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
 
+#details_button_faq{
+    width: 100%;
+text-align: center;
+padding: 10px 100px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+margin-bottom: 20px;
+background-color: #8e96c5;
+list-style-type: none;
+color: white;
+font-weight: bolder;
+}
 .info_abt_me .title,.info_service .title{
     font-size: 40px;
     text-align: center;

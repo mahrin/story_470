@@ -172,25 +172,7 @@ $query = mysql_query("SELECT * from recepie where main_copy=1 AND  recepie_id=" 
 
                                     </div>
 
-                                    <!--                                    <div class='rating_show' style="float:right">
-                                                                            <form action="description.php?id=<?php // echo "$recepie_id";  ?>" method="POST">
-                                                                                <table>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <select name='rate' style="padding: 10px 40px 7px;">
-                                                                                                <option value="1">1  <span>☆</span></option>
-                                                                                                <option value="2">2 <span>☆</span><span>☆</span></option>
-                                                                                                <option value="3">3 <span>☆</span><span>☆</span><span>☆</span></option>
-                                                                                                <option value="4">4 <span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
-                                                                                                <option value="5">5  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
-                                                                                            </select>
-                                    
-                                                                                            <input type="submit" id='comment_button' name="rating" value="rating">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </form>   
-                                                                        </div>-->
+   
                                 </div>
 
                             </div>
